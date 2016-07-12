@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="e2b00a69-0f2b-4f48-a4fd-fc6337be45df">
+      <user-name>dr_sherlock</user-name>
+      <user-password>dfc0dfc5dfc8dfd9dfcfdfcfdfc1dfcfdfd8</user-password>
+      <schema-pattern>jobseeker.pg_catalog jobseeker.public</schema-pattern>
+      <default-schemas>jobseeker.public</default-schemas>
+    </data-source>
+  </component>
+</project>
