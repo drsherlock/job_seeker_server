@@ -1,2 +1,2 @@
-web: python manage.py collectstatic --no-input; gunicorn job_seeker.wsgi --log-file -
+web: gunicorn job_seeker.wsgi --log-file -
 
