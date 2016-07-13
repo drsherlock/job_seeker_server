@@ -26,6 +26,11 @@ try:
 except ImportError:
     pass
 
+if DEBUG:
+    SECRET_KEY = SECRET_KEY
+else:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+
 SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
