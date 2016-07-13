@@ -105,7 +105,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
-CORS_ORIGIN_ALLOW_ALL = True   
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -128,7 +128,7 @@ STATIC_URL = '/static/'
 ALLOWED_HOSTS = ['*']
 
 import dj_database_url
-DATABASES = { 'default' : dj_database_url.config()}
+
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
@@ -139,5 +139,3 @@ except ImportError:
 
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
-
-
