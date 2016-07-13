@@ -21,20 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-try:
-    from .settings_local import *
-except ImportError:
-    pass
-
-if DEBUG:
-    SECRET_KEY = SECRET_KEY
-else:
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG
-
-ALLOWED_HOSTS = []
+DEBUG = False
 
 # Application definition
 
@@ -85,14 +73,10 @@ WSGI_APPLICATION = 'job_seeker.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'jobseeker',
-        'USER': USER,
-        'PASSWORD': PASSWORD,
-        'HOST': 'localhost',
-        'PORT': '',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
     }
 }
 
@@ -141,3 +125,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ALLOWED_HOSTS = ['*']
+
+import dj_database_url
+DATABASES = { 'default' : dj_database_url.config()}
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
+try:
+    from .settings_local import *
+except ImportError:
+    pass
+
+if not DEBUG:
+    SECRET_KEY = os.environ['SECRET_KEY']
+
