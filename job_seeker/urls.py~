@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^', include('Jobs.urls', namespace="Jobs")),
 ]
 
-import settings
+from django.conf import settings
 urlpatterns += patterns('',
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
         'document_root': settings.STATIC_ROOT,
