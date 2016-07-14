@@ -48,6 +48,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'job_seeker.urls'
@@ -157,6 +158,6 @@ try:
 except ImportError:
     pass
 
-
-SECRET_KEY = os.environ['SECRET_KEY']
+if not DEBUG:
+    SECRET_KEY = os.environ['SECRET_KEY']
 
