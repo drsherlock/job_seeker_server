@@ -26,7 +26,7 @@ urlpatterns = [
 from django.conf import settings
 from django.conf.urls import patterns
 urlpatterns += patterns('',
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
+    url(r'^static/(?P<path>.*)$', 'django.contrib.staticfiles.views.serve', {
         'document_root': settings.STATIC_ROOT,
     }),
 )
