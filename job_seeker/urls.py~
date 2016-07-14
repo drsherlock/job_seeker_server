@@ -23,10 +23,3 @@ urlpatterns = [
     url(r'^', include('Jobs.urls', namespace="Jobs")),
 ]
 
-from django.conf import settings
-from django.conf.urls import patterns
-urlpatterns += patterns('',
-    url(r'^static/(?P<path>.*)$', 'django.contrib.staticfiles.views.serve', {
-        'document_root': settings.STATIC_ROOT,
-    }),
-)
