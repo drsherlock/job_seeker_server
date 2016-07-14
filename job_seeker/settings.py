@@ -157,6 +157,6 @@ try:
 except ImportError:
     pass
 
-if not DEBUG:
-    SECRET_KEY = os.environ['SECRET_KEY']
+
+SECRET_KEY = os.environ['SECRET_KEY']
 
