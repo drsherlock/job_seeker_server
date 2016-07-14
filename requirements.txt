@@ -17,5 +17,4 @@ psycopg2==2.6.1
 static3==0.7.0
 vcversioner==2.16.0.0
 wheel==0.24.0
-whitenoise==3.2
 zope.interface==4.2.0
