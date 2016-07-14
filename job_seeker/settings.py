@@ -144,7 +144,7 @@ STATIC_URL = '/static/'
 #     os.path.join(BASE_DIR, 'static_pro'),
 # )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_pro', 'root_static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 try:
     from .settings_local import *
