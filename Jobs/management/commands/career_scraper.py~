@@ -1,6 +1,7 @@
 import os
 import re
-import urllib2
+# import urllib2
+import requests
 from bs4 import BeautifulSoup
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "job_seeker.settings")
@@ -50,8 +51,8 @@ def find_jobs(company, soup):
 
 def get_html(company):
     url = company.career_url
-    req = urllib2.Request(url, headers={'User-Agent': 'Mozilla/5.0'}) 
-    career_page = urllib2.urlopen(req)
+#    req = urllib2.Request(url, headers={'User-Agent': 'Mozilla/5.0'}) 
+    career_page = requests.get(url)
     soup = BeautifulSoup(career_page, "lxml")
     find_jobs(company, soup)
 
