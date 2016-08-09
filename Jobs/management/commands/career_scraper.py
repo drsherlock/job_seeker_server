@@ -53,7 +53,7 @@ def get_html(company):
     url = company.career_url
 #    req = urllib2.Request(url, headers={'User-Agent': 'Mozilla/5.0'}) 
     career_page = requests.get(url)
-    soup = BeautifulSoup(career_page,text, "lxml")
+    soup = BeautifulSoup(career_page.text, "lxml")
     find_jobs(company, soup)
 
 
