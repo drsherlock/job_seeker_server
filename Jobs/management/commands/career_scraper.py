@@ -1,6 +1,5 @@
 import os
 import re
-# import urllib2
 import requests
 from bs4 import BeautifulSoup
 
@@ -39,7 +38,7 @@ def find_jobs(company, soup):
                    'proficient', 'leadsquared', 'referral', 'should', 'must', 'become', 'global', 'degree', 'good',
                    'capabilities', 'leadership', 'services', 'expertise', 'architecture', 'hire', 'follow',
                    'procedures', 'conduct', 'perk', 'missed', 'generation', 'search', 'tools', 'worldwide', 'contact',
-                   'question', 'intern', 'classes', 'trust', 'ability']
+                   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response', 'you', 'using', 'work', 'based', 'grow', 'provide']
 
     profile_list = set()
     k = soup.body.findAll(text=allowed)
@@ -51,7 +50,6 @@ def find_jobs(company, soup):
 
 def get_html(company):
     url = company.career_url
-#    req = urllib2.Request(url, headers={'User-Agent': 'Mozilla/5.0'}) 
     career_page = requests.get(url)
     soup = BeautifulSoup(career_page.text, "lxml")
     find_jobs(company, soup)
