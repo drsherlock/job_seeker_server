@@ -50,9 +50,13 @@ def find_jobs(company, soup):
 
 def get_html(company):
     url = company.career_url
-    career_page = requests.get(url)
-    soup = BeautifulSoup(career_page.text, "lxml")
-    find_jobs(company, soup)
+    try:
+    	career_page = requests.get(url)
+    except:
+	print company.company_name
+    else:
+    	soup = BeautifulSoup(career_page.text, "lxml")
+    	find_jobs(company, soup)
 
 
 def get_company():
