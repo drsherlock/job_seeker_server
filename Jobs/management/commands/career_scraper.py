@@ -61,9 +61,13 @@ class Command(BaseCommand):
 
 
 	def handle(self, *args, **options):
-		companies = C.objects.all()
-		for company in companies:
-			self.get_html(company)
+		try:
+			companies = C.objects.all()
+		except:
+			print "fuck this"
+		else:
+			for company in companies:
+				self.get_html(company)
 
 # c = Command()
 # c.get_company()
