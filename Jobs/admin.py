@@ -6,7 +6,7 @@ from .models import Company, Job
 
 
 class CompanyAdmin(admin.ModelAdmin):
-    list_display = ['company_name', 'location', 'founded_year', 'opening']
+    list_display = ['company_name', 'location', 'founded_year', 'opening', 'no_openings']
     list_filter = ['location', 'founded_year', 'opening']
     search_fields = ['company_name']
 
