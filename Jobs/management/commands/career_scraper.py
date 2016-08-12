@@ -61,9 +61,9 @@ class Command(BaseCommand):
 
 
 	def handle(self, *args, **options):
-		print "fuck fuck"
 		companies = Company.objects.all()
 		for company in companies:
+			print "fuck fuck"
 			self.get_html(company)
 
 # c = Command()
