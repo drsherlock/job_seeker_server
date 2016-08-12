@@ -38,7 +38,7 @@ def find_jobs(company, soup):
                    'proficient', 'leadsquared', 'referral', 'should', 'must', 'become', 'global', 'degree', 'good',
                    'capabilities', 'leadership', 'services', 'expertise', 'architecture', 'hire', 'follow',
                    'procedures', 'conduct', 'perk', 'missed', 'generation', 'search', 'tools', 'worldwide', 'contact',
-                   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response', 'you', 'using', 'work', 'based', 'grow', 'provide']
+                   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response', 'you', 'using', 'work', 			   'based', 'grow', 'provide']
 
     profile_list = set()
     k = soup.body.findAll(text=allowed)
