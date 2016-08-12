@@ -13,7 +13,7 @@ django.setup()
 
 from Jobs.models import Company, Job
 
-class Command(BaseCommand):
+class Command(BaseCommand, Company, Job):
 	def update_jobs(self, company, profiles):
 		name = company.company_name
 		if profiles is not None:
@@ -61,7 +61,7 @@ class Command(BaseCommand):
 
 
 	def handle(self, *args, **options):
-		companies = self.Company.objects.all()
+		companies = Company.objects.all()
 		for company in companies:
 			self.get_html(company)
 
