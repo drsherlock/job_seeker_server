@@ -11,16 +11,16 @@ import django
 
 django.setup()
 
-from Jobs.models import Company, Job
+from Jobs.models import Company as C, Job as J
 
-class Command(BaseCommand, Company, Job):
+class Command(BaseCommand):
 	def update_jobs(self, company, profiles):
 		name = company.company_name
 		if profiles is not None:
 			company.opening = True
 			company.no_openings = len(profiles)
 			for profile in profiles:
-				job = Job.objects.get_or_create(company=company, job_name=profile)
+				job = J.objects.get_or_create(company=company, job_name=profile)
 				print name + ":" + profile
 		else:
 			company.opening = False
@@ -61,7 +61,7 @@ class Command(BaseCommand, Company, Job):
 
 
 	def handle(self, *args, **options):
-		companies = Company.objects.all()
+		companies = C.objects.all()
 		for company in companies:
 			self.get_html(company)
 
