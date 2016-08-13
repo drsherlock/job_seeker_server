@@ -34,18 +34,18 @@ class Command(BaseCommand):
 		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
 							 r"Producer|Evangelist|Ninja", re.IGNORECASE)
-		not_allowed = ['responsibilities', 'description', 'requirements', 'experience', 'empowering', 'engineering',
-					   'find', 'skills', 'recruiterbox', 'google', 'communicating', 'associated', 'internship', 'you'
-					   'proficient', 'leadsquared', 'referral', 'should', 'must', 'become', 'global', 'degree', 'good',
-					   'capabilities', 'leadership', 'services', 'expertise', 'architecture', 'hire', 'follow', 'jobs'
-					   'procedures', 'conduct', 'perk', 'missed', 'generation', 'search', 'tools', 'worldwide', 'contact',
-					   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response',
-					   'using', 'work', 'based', 'grow', 'provide', 'understand', 'header', 'headline']
+		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bempowering\b|\bengineering\b|\b"
+					   			 r"find\b|\bskills\b|\brecruiterbox\b|\bgoogle\b|\bcommunicating\b|\bassociated\b|\binternship\b|\byou\b|\b"
+					   			 r"proficient\b|\bleadsquared\b|\breferral\b|\bshould\b|\bmust\b|\bbecome\b|\bglobal\b|\bdegree\b|\bgood\b|\b"
+					   			 r"capabilities\b|\bleadership\b|\bservices\b|\bexpertise\b|\barchitecture\b|\bhire\b|\bfollow\b|\bjobs\b|\b"
+							   	 r"procedures\b|\bconduct\b|\bperk\b|\bmissed\b|\bgeneration\b|\bsearch\b|\btools\b|\bworldwide\b|\bcontact\b|\b"
+							   	 r"question\b|\bintern\b|\bclasses\b|\btrust\b|\bability\b|\bbusinesses\b|\bjoin\b|\bindustry\b|\bresponse\b|\b"
+							   	 r"using\b|\bwork\b|\bbased\b|\bgrow\b|\bprovide\b|\bunderstand\b|\bheader\b|\bheadline\b|\bmasthead\b|\boffice\b", re.IGNORECASE)
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
 		for i in k:
-			if len(i) < 60 and not any(x in i.lower() for x in not_allowed):
+			if len(i) < 60 and not_allowed.search(i) is None:
 				profile_list.add(i.strip().upper())
 		self.update_jobs(company, profile_list)
 
