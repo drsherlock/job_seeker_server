@@ -40,7 +40,7 @@ class Command(BaseCommand):
 					   'capabilities', 'leadership', 'services', 'expertise', 'architecture', 'hire', 'follow', 'jobs'
 					   'procedures', 'conduct', 'perk', 'missed', 'generation', 'search', 'tools', 'worldwide', 'contact',
 					   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response',
-					   'using', 'work', 'based', 'grow', 'provide', 'understand']
+					   'using', 'work', 'based', 'grow', 'provide', 'understand', 'header', 'headline']
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
