@@ -64,6 +64,7 @@ class Command(BaseCommand):
 	def handle(self, *args, **options):
 		companies = Company.objects.all()
 		for company in companies:
+			company.job_set.all().delete()
 			self.get_html(company)
 
 # c = Command()
