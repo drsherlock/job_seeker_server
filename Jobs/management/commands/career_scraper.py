@@ -45,7 +45,7 @@ class Command(BaseCommand):
 					   			 r"\bconduct\b|\bmissed\b|\bsearch\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|"
 					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
-							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b", re.IGNORECASE)
+							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b|\bheading\b", re.IGNORECASE)
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
