@@ -33,13 +33,14 @@ class Command(BaseCommand):
 	def find_jobs(self, company, soup):
 		allowed = re.compile(r"Developer|Designer|Engineer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head"
-							 r"Producer|Evangelist|Ninja|Jobs", re.IGNORECASE)
+							 r"Producer|Evangelist|Ninja", re.IGNORECASE)
 		not_allowed = ['responsibilities', 'description', 'requirements', 'experience', 'empowering', 'engineering',
 					   'find', 'skills', 'recruiterbox', 'google', 'communicating', 'associated', 'internship',
 					   'proficient', 'leadsquared', 'referral', 'should', 'must', 'become', 'global', 'degree', 'good',
 					   'capabilities', 'leadership', 'services', 'expertise', 'architecture', 'hire', 'follow',
 					   'procedures', 'conduct', 'perk', 'missed', 'generation', 'search', 'tools', 'worldwide', 'contact',
-					   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response', 'you', 'using', 'work', 			   'based', 'grow', 'provide']
+					   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response',
+					   'you', 'using', 'work', 'based', 'grow', 'provide', 'jobs']
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
