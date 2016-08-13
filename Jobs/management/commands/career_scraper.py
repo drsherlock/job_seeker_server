@@ -31,16 +31,16 @@ class Command(BaseCommand):
 
 
 	def find_jobs(self, company, soup):
-		allowed = re.compile(r"Developer|Designer|Engineer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
+		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
-							 r"Producer|Evangelist|Ninja|Scalability", re.IGNORECASE)
+							 r"Producer|Evangelist|Ninja", re.IGNORECASE)
 		not_allowed = ['responsibilities', 'description', 'requirements', 'experience', 'empowering', 'engineering',
-					   'find', 'skills', 'recruiterbox', 'google', 'communicating', 'associated', 'internship',
+					   'find', 'skills', 'recruiterbox', 'google', 'communicating', 'associated', 'internship', 'you'
 					   'proficient', 'leadsquared', 'referral', 'should', 'must', 'become', 'global', 'degree', 'good',
-					   'capabilities', 'leadership', 'services', 'expertise', 'architecture', 'hire', 'follow',
+					   'capabilities', 'leadership', 'services', 'expertise', 'architecture', 'hire', 'follow', 'jobs'
 					   'procedures', 'conduct', 'perk', 'missed', 'generation', 'search', 'tools', 'worldwide', 'contact',
 					   'question', 'intern', 'classes', 'trust', 'ability', 'businesses', 'join', 'industry', 'response',
-					   'you', 'using', 'work', 'based', 'grow', 'provide', 'jobs', 'understand']
+					   'using', 'work', 'based', 'grow', 'provide', 'understand']
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
