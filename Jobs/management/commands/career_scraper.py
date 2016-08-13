@@ -34,13 +34,16 @@ class Command(BaseCommand):
 		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
 							 r"Producer|Evangelist|Ninja", re.IGNORECASE)
-		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bempowering\b|\bengineering\b|\b"
-					   			 r"find\b|\bskills\b|\brecruiterbox\b|\bgoogle\b|\bcommunicating\b|\bassociated\b|\binternship\b|\byou\b|\b"
-					   			 r"proficient\b|\bleadsquared\b|\breferral\b|\bshould\b|\bmust\b|\bbecome\b|\bglobal\b|\bdegree\b|\bgood\b|\b"
-					   			 r"capabilities\b|\bleadership\b|\bservices\b|\bexpertise\b|\barchitecture\b|\bhire\b|\bfollow\b|\bjobs\b|\b"
-							   	 r"procedures\b|\bconduct\b|\bperk\b|\bmissed\b|\bgeneration\b|\bsearch\b|\btools\b|\bworldwide\b|\bcontact\b|\b"
-							   	 r"question\b|\bintern\b|\bclasses\b|\btrust\b|\bability\b|\bbusinesses\b|\bjoin\b|\bindustry\b|\bresponse\b|\b"
-							   	 r"using\b|\bwork\b|\bbased\b|\bgrow\b|\bprovide\b|\bunderstand\b|\bheader\b|\bheadline\b|\bmasthead\b|\boffice\b", re.IGNORECASE)
+		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
+								 r"\bempowering\b|\bengineering\b|\bwork\b|\bskills\b|\brecruiterbox\b|\bjobs\b|"
+								 r"\bgoogle\b|\bcommunicating\b|\bassociated\b|\binternship\b|\bgood\b|\bjoin\b|"
+					   			 r"\bproficient\b|\bleadsquared\b|\breferral\b|\bshould\b|\bbecome\b|\bprovide\b|"
+					   			 r"\bglobal\b|\bdegree\b|\bcapabilities\b|\bleadership\b|\bservices\b|\bperk\b|"
+					   			 r"\bexpertise\b|\barchitecture\b|\bprocedures\b|\bunderstand\b|\bgeneration\b|"
+					   			 r"\bconduct\b|\bmissed\b|\bsearch\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|"
+					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
+					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
+							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b", re.IGNORECASE)
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
