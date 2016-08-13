@@ -33,7 +33,9 @@ class Command(BaseCommand):
 	def find_jobs(self, company, soup):
 		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
-							 r"Producer|Evangelist|Ninja", re.IGNORECASE)
+							 r"Producer|Evangelist|Ninja|Representative", re.IGNORECASE)
+							# QA Automation, Inside Sales
+
 		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
 								 r"\bempowering\b|\bengineering\b|\bwork\b|\bskills\b|\brecruiterbox\b|\bjobs\b|"
 								 r"\bgoogle\b|\bcommunicating\b|\bassociated\b|\binternship\b|\bgood\b|\bjoin\b|"
