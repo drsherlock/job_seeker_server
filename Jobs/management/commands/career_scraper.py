@@ -47,8 +47,11 @@ class Command(BaseCommand):
 					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
 							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b|\bheading\b|\bpassed\b|"
-							   	 r"\btime\b|\bcolor\b|\bdevelop\b|\bbox\b|\bcrm\b|\bexceptional\b|\binterns\b|\blater\b|"
-							   	 r"\bimages\b|\bcreate\b|\bcoordinating\b|\bdelays\b|\blatest\b", re.IGNORECASE)
+							   	 r"\btime\b|\bcolor\b|\bdevelop\b|\bbox\b|\bcrm\b|\bplus\b|\binterns\b|\blater\b|"
+							   	 r"\bimages\b|\bcreate\b|\bcoordinating\b|\bdelays\b|\blatest\b|\bverify\b|\btheir\b|"
+							   	 r"\btreat\b|\bresponsible\b|\bben\b|\brequired\b|\bacross\b|\bclosely\b|\bamazing\b|"
+							   	 r"\bsolid\b|\bprocesses\b|\bexceptional\b|\bshall\b|\byears\b|\bcould\b|\bpossess\b|"
+							   	 r"\bsearches\b|\bknowledge\b|\bother\b|\bsuggest\b", re.IGNORECASE)
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
