@@ -33,7 +33,8 @@ class Command(BaseCommand):
 	def find_jobs(self, company, soup):
 		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
-							 r"Producer|Evangelist|Ninja|Representative", re.IGNORECASE)
+							 r"Producer|Evangelist|Ninja|Representative|Marketer|Consultant|Strategist|"
+							 r"Curator|Programmer", re.IGNORECASE)
 							# QA Automation, Inside Sales
 
 		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
@@ -45,12 +46,13 @@ class Command(BaseCommand):
 					   			 r"\bconduct\b|\bmissed\b|\bsearch\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|"
 					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
-							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b|\bheading\b", re.IGNORECASE)
+							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b|\bheading\b|\bpassed\b|"
+							   	 r"\btime\b|\bcolor\b|\bdevelop\b|\bbox\b|\bcrm\b|\bexceptional\b|\binterns\b|\blater\b", re.IGNORECASE)
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
 		for i in k:
-			if len(i) < 60 and not_allowed.search(i) is None:
+			if len(i) < 100 and not_allowed.search(i) is None:
 				profile_list.add(i.strip().upper())
 		self.update_jobs(company, profile_list)
 
