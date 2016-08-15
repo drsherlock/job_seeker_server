@@ -34,7 +34,7 @@ class Command(BaseCommand):
 		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
 							 r"Producer|Evangelist|Ninja|Representative|Marketer|Consultant|Strategist|"
-							 r"Curator|Programmer", re.IGNORECASE)
+							 r"Curator|Programmer|Finder", re.IGNORECASE)
 							# QA Automation, Inside Sales
 
 		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
@@ -51,7 +51,8 @@ class Command(BaseCommand):
 							   	 r"\bimages\b|\bcreate\b|\bcoordinating\b|\bdelays\b|\blatest\b|\bverify\b|\btheir\b|"
 							   	 r"\btreat\b|\bresponsible\b|\bben\b|\brequired\b|\bacross\b|\bclosely\b|\bamazing\b|"
 							   	 r"\bsolid\b|\bprocesses\b|\bexceptional\b|\bshall\b|\byears\b|\bcould\b|\bpossess\b|"
-							   	 r"\bsearches\b|\bknowledge\b|\bother\b|\bsuggest\b", re.IGNORECASE)
+							   	 r"\bsearches\b|\bknowledge\b|\bother\b|\bsuggest\b|\bdiverse\b|\bteams\b|\bgoing\b|"
+							   	 r"\bidentify\b|\bexcellence\b|\bleaderboard\b", re.IGNORECASE)
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
