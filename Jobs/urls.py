@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^companies/(?P<id>\d+)/api/$', views.get_company),
     url(r'^companies/search/(?P<company>[\w\-]+)/api/$', views.search_companies),
     url(r'^jobs/search/(?P<job>[\w\-]+)/api/$', views.search_jobs),
+    url(r'^companies/(?P<id>\d+)/search/(?P<job_name>[\w\-]+)/api/$', views.search_job)
     # url(r'^jobs/(?P<id>\d+)/$', views.get_job)
 
 ]

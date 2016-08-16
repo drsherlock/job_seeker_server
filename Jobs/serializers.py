@@ -25,3 +25,7 @@ class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
         fields = ('id', 'company_name', 'location', 'founded_year', 'opening', 'no_openings', 'company_url', 'career_url', 'jobs')
+
+
+
+

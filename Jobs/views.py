@@ -5,7 +5,7 @@ from .serializers import CompanyAllSerializer, JobAllSerializer, CompanySerializ
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
-
+import re
 
 @api_view(['GET'])
 @permission_classes((AllowAny,))
@@ -51,3 +51,15 @@ def search_jobs(request, job):
     jobs = paginator.paginate_queryset(jobs_list, request)
     serializer = JobAllSerializer(jobs, many=True)
     return paginator.get_paginated_response(serializer.data)
+
+@api_view(['GET'])
+@permission_classes((AllowAny, ))
+def search_job(request, id, job_name):
+    company = Company.objects.get(id=id)
+    serializer = CompanySerializer(company)
+    copy_list = list(serializer.data["jobs"])
+    for i in range(len(copy_list)):
+        if re.search(job_name, copy_list[i], re.IGNORECASE) is None:
+            x = copy_list[i]
+            serializer.data["jobs"].remove(x)
+    return Response(serializer.data)
