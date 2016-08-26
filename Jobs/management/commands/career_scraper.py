@@ -34,7 +34,7 @@ class Command(BaseCommand):
 		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
 							 r"Producer|Evangelist|Ninja|Representative|Marketer|Consultant|Strategist|"
-							 r"Curator|Programmer|Finder|Accountant|Tester", re.IGNORECASE)
+							 r"Curator|Programmer|Finder|Accountant|Tester|Assistant|Researcher|Officer", re.IGNORECASE)
 							# QA Automation, Inside Sales, Manager Sales
 
 		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
@@ -43,7 +43,7 @@ class Command(BaseCommand):
 					   			 r"\bproficient\b|\bleadsquared\b|\breferral\b|\bshould\b|\bbecome\b|\bprovide\b|"
 					   			 r"\bglobal\b|\bdegree\b|\bcapabilities\b|\bleadership\b|\bservices\b|\bperk\b|"
 					   			 r"\bexpertise\b|\barchitecture\b|\bprocedures\b|\bunderstand\b|\bgeneration\b|"
-					   			 r"\bconduct\b|\bmissed\b|\bsearch\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|"
+					   			 r"\bconduct\b|\bmissed\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|"
 					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
 							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b|\bheading\b|\bpassed\b|"
@@ -53,7 +53,8 @@ class Command(BaseCommand):
 							   	 r"\bsolid\b|\bprocesses\b|\bexceptional\b|\bshall\b|\byears\b|\bcould\b|\bpossess\b|"
 							   	 r"\bsearches\b|\bknowledge\b|\bother\b|\bsuggest\b|\bdiverse\b|\bteams\b|\bgoing\b|"
 							   	 r"\bidentify\b|\bexcellence\b|\bleaderboard\b|\badministration\b|\bhelp\b|\bhiring\b|"
-							   	 r"\bchat\b|\benhance\b|\bprofiles\b|\boptimization\b", re.IGNORECASE)
+							   	 r"\bchat\b|\benhance\b|\bprofiles\b|\boptimization\b|\bensure\b|\b@\b|\bdedicated\b|"
+							   	 r"\bengineered\b|\bincluding\b|\bfounder\b|\bowned\b|\bdetermine\b|\badvantage\b", re.IGNORECASE)
 
 		profile_list = set()
 		k = soup.body.findAll(text=allowed)
