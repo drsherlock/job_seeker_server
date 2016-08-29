@@ -35,14 +35,14 @@ class Command(BaseCommand):
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
 							 r"Producer|Evangelist|Ninja|Representative|Marketer|Consultant|Strategist|"
 							 r"Curator|Programmer|Finder|Accountant|Tester|Assistant|Researcher|Officer|Maker", re.IGNORECASE)
-							# QA Automation, Inside Sales, Manager Sales
+							# QA Automation, Inside Sales, Manager Sales, Sales & Business Development
 
 		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
 								 r"\bempowering\b|\bengineering\b|\bwork\b|\bskills\b|\brecruiterbox\b|\bjobs\b|"
 								 r"\bgoogle\b|\bcommunicating\b|\bassociated\b|\binternship\b|\bgood\b|\bjoin\b|"
 					   			 r"\bproficient\b|\bleadsquared\b|\breferral\b|\bshould\b|\bbecome\b|\bprovide\b|"
 					   			 r"\bglobal\b|\bdegree\b|\bcapabilities\b|\bleadership\b|\bservices\b|\bperk\b|"
-					   			 r"\bexpertise\b|\barchitecture\b|\bprocedures\b|\bunderstand\b|\bgeneration\b|"
+					   			 r"\bexpertise\b|\barchitecture\b|\bprocedures\b|\bunderstand\b|"
 					   			 r"\bconduct\b|\bmissed\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|\bsome\b|"
 					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
@@ -56,8 +56,9 @@ class Command(BaseCommand):
 							   	 r"\bchat\b|\benhance\b|\bprofiles\b|\boptimization\b|\bensure\b|\b@\b|\bdedicated\b|"
 							   	 r"\bengineered\b|\bincluding\b|\bfounder\b|\bowned\b|\bdetermine\b|\badvantage\b|"
 							   	 r"\bapproach\b|\bremain\b|\bcontinues\b|\bdecade\b|\bbelief\b|\bpng\b|\bheadquarters\b|"
-							   	 r"\bunderstanding\b|\bdeveloping\b|\bmeet\b|\bservicing\b|\bdiscuss\b|"
-							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b", re.IGNORECASE)
+							   	 r"\bunderstanding\b|\bdeveloping\b|\bmeet\b|\bservicing\b|\bdiscuss\b|\bconstant\b|"
+							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b|\bjob\b|\bide\b|\breference\b|"
+							   	 r"\bas\b|\btracking\b|\bportal\b|\bwith\b", re.IGNORECASE)
 
 		profile_list = set()
 		try:
