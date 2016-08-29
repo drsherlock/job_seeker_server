@@ -34,7 +34,7 @@ class Command(BaseCommand):
 		allowed = re.compile(r"Developer|Engineer|Designer|Admin|Manager|Writer|Executive|Lead|Analyst|Editor|"
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
 							 r"Producer|Evangelist|Ninja|Representative|Marketer|Consultant|Strategist|"
-							 r"Curator|Programmer|Finder|Accountant|Tester|Assistant|Researcher|Officer", re.IGNORECASE)
+							 r"Curator|Programmer|Finder|Accountant|Tester|Assistant|Researcher|Officer|Maker", re.IGNORECASE)
 							# QA Automation, Inside Sales, Manager Sales
 
 		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
@@ -56,7 +56,7 @@ class Command(BaseCommand):
 							   	 r"\bchat\b|\benhance\b|\bprofiles\b|\boptimization\b|\bensure\b|\b@\b|\bdedicated\b|"
 							   	 r"\bengineered\b|\bincluding\b|\bfounder\b|\bowned\b|\bdetermine\b|\badvantage\b|"
 							   	 r"\bapproach\b|\bremain\b|\bcontinues\b|\bdecade\b|\bbelief\b|\bpng\b|\bheadquarters\b|"
-							   	 r"\bunderstanding\b|\bdeveloping\b|\bmeet\b|\bservicing\b|\bdiscuss\b|\bend\b|"
+							   	 r"\bunderstanding\b|\bdeveloping\b|\bmeet\b|\bservicing\b|\bdiscuss\b|"
 							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b", re.IGNORECASE)
 
 		profile_list = set()
