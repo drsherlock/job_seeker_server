@@ -58,7 +58,7 @@ class Command(BaseCommand):
 							   	 r"\bapproach\b|\bremain\b|\bcontinues\b|\bdecade\b|\bbelief\b|\bpng\b|\bheadquarters\b|"
 							   	 r"\bunderstanding\b|\bdeveloping\b|\bmeet\b|\bservicing\b|\bdiscuss\b|\bconstant\b|"
 							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b|\bjob\b|\bide\b|\breference\b|"
-							   	 r"\bas\b|\btracking\b|\bportal\b|\bwith\b", re.IGNORECASE)
+							   	 r"\bas\b|\btracking\b|\bportal\b|\bwith\b|\bsrc\b", re.IGNORECASE)
 
 		profile_list = set()
 		try:
