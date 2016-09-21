@@ -60,7 +60,8 @@ class Command(BaseCommand):
 							   	 r"\bunderstanding\b|\bdeveloping\b|\bmeet\b|\bservicing\b|\bdiscuss\b|\bconstant\b|"
 							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b|\bjob\b|\bide\b|\breference\b|"
 							   	 r"\bas\b|\btracking\b|\bportal\b|\bwith\b|\bsrc\b|\bahead\b|\bprocessed\b|\bmattresses\b|"
-							   	 r"\bhome\b|\boptimize\b|\bleast\b|\bassessment\b|\bemployability\b|\bvarious\b", re.IGNORECASE)
+							   	 r"\bhome\b|\boptimize\b|\bleast\b|\bassessment\b|\bemployability\b|\bvarious\b|\baptitude|"
+							   	 r"\bbroadly\b", re.IGNORECASE)
 
 		profile_list = set()
 		try:
