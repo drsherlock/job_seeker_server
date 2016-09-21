@@ -47,7 +47,7 @@ class Command(BaseCommand):
 					   			 r"\bconduct\b|\bmissed\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|\bsome\b|"
 					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
-							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b|\bheading\b|\bpassed\b|"
+							   	 r"\busing\b|\bheader\b|\bjobscore\b|\bmasthead\b|\bheading\b|\bpassed\b|"
 							   	 r"\btime\b|\bcolor\b|\bdevelop\b|\bbox\b|\bcrm\b|\bplus\b|\binterns\b|\blater\b|"
 							   	 r"\bimages\b|\bcoordinating\b|\bdelays\b|\blatest\b|\bverify\b|\btheir\b|"
 							   	 r"\btreat\b|\bresponsible\b|\bben\b|\brequired\b|\bacross\b|\bclosely\b|\bamazing\b|"
@@ -61,7 +61,7 @@ class Command(BaseCommand):
 							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b|\bjob\b|\bide\b|\breference\b|"
 							   	 r"\bas\b|\btracking\b|\bportal\b|\bwith\b|\bsrc\b|\bahead\b|\bprocessed\b|\bmattresses\b|"
 							   	 r"\bhome\b|\boptimize\b|\bleast\b|\bassessment\b|\brole\b|\bvarious\b|\baptitude|"
-							   	 r"\bbroadly\b|\bmitra\b|\binvestors\b", re.IGNORECASE)
+							   	 r"\bbroadly\b|\bmitra\b|\binvestors\b|\bretention\b|\bmanaging\b", re.IGNORECASE)
 
 		profile_list = set()
 		try:
