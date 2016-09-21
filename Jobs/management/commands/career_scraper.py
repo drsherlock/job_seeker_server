@@ -43,7 +43,7 @@ class Command(BaseCommand):
 								 r"\bgoogle\b|\bcommunicating\b|\bassociated\b|\binternship\b|\bgood\b|\bjoin\b|"
 					   			 r"\bproficient\b|\bleadsquared\b|\breferral\b|\bshould\b|\bbecome\b|\bprovide\b|"
 					   			 r"\bglobal\b|\bdegree\b|\bcapabilities\b|\bleadership\b|\bservices\b|\bperk\b|"
-					   			 r"\bexpertise\b|\barchitecture\b|\bprocedures\b|\bunderstand\b|"
+					   			 r"\bexpertise\b|\barchitecture\b|\bprocedures\b|\bunderstand\b|\bhigh\b"
 					   			 r"\bconduct\b|\bmissed\b|\btools\b|\bbusinesses\b|\bfind\b|\bbased\b|\bsome\b|"
 					   			 r"\bworldwide\b|\bcontact\b|\bquestion\b|\bintern\b|\bclasses\b|\btrust\b|\byou\b|"
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
@@ -61,7 +61,7 @@ class Command(BaseCommand):
 							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b|\bjob\b|\bide\b|\breference\b|"
 							   	 r"\bas\b|\btracking\b|\bportal\b|\bwith\b|\bsrc\b|\bahead\b|\bprocessed\b|\bmattresses\b|"
 							   	 r"\bhome\b|\boptimize\b|\bleast\b|\bassessment\b|\brole\b|\bvarious\b|\baptitude|"
-							   	 r"\bbroadly\b", re.IGNORECASE)
+							   	 r"\bbroadly\b|\bmitra\b|\binvestors\b", re.IGNORECASE)
 
 		profile_list = set()
 		try:
