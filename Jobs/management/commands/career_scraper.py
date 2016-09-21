@@ -35,7 +35,7 @@ class Command(BaseCommand):
 							 r"Associate|Architect|Recruiter|Specialist|Scientist|Support|Expert|SSE|Head|"
 							 r"Producer|Evangelist|Ninja|Representative|Marketer|Consultant|Strategist|"
 							 r"Curator|Programmer|Finder|Accountant|Tester|Assistant|Researcher|Officer|Maker|"
-							 r"Advisor", re.IGNORECASE)
+							 r"Advisor|Visualiser", re.IGNORECASE)
 							# QA Automation, Inside Sales, Manager Sales, Sales & Business Development
 
 		not_allowed = re.compile(r"\bresponsibilities\b|\bdescription\b|\brequirements\b|\bexperience\b|\bhire\b|"
@@ -49,7 +49,7 @@ class Command(BaseCommand):
 					   			 r"\bability\b|\bindustry\b|\bresponse\b|\bgrow\b|\bmust\b|\bheadline\b|\bfollow\b|"
 							   	 r"\busing\b|\bheader\b|\boffice\b|\bjobscore\b|\bmasthead\b|\bheading\b|\bpassed\b|"
 							   	 r"\btime\b|\bcolor\b|\bdevelop\b|\bbox\b|\bcrm\b|\bplus\b|\binterns\b|\blater\b|"
-							   	 r"\bimages\b|\bcreate\b|\bcoordinating\b|\bdelays\b|\blatest\b|\bverify\b|\btheir\b|"
+							   	 r"\bimages\b|\bcoordinating\b|\bdelays\b|\blatest\b|\bverify\b|\btheir\b|"
 							   	 r"\btreat\b|\bresponsible\b|\bben\b|\brequired\b|\bacross\b|\bclosely\b|\bamazing\b|"
 							   	 r"\bsolid\b|\bprocesses\b|\bexceptional\b|\bshall\b|\byears\b|\bcould\b|\bpossess\b|"
 							   	 r"\bsearches\b|\bknowledge\b|\bother\b|\bsuggest\b|\bdiverse\b|\bteams\b|\bgoing\b|"
@@ -60,7 +60,7 @@ class Command(BaseCommand):
 							   	 r"\bunderstanding\b|\bdeveloping\b|\bmeet\b|\bservicing\b|\bdiscuss\b|\bconstant\b|"
 							   	 r"\bbiggest\b|\bwho\b|\btechnically\b|\bbuilding\b|\bjob\b|\bide\b|\breference\b|"
 							   	 r"\bas\b|\btracking\b|\bportal\b|\bwith\b|\bsrc\b|\bahead\b|\bprocessed\b|\bmattresses\b|"
-							   	 r"\bhome\b|\boptimize\b|\bleast\b|\bassessment\b|\bemployability\b|\bvarious\b|\baptitude|"
+							   	 r"\bhome\b|\boptimize\b|\bleast\b|\bassessment\b|\brole\b|\bvarious\b|\baptitude|"
 							   	 r"\bbroadly\b", re.IGNORECASE)
 
 		profile_list = set()
